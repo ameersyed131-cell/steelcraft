@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SteelCraft Industries — Premium Commercial Kitchen Equipment | Hyderabad</title>
+<meta name="description" content="Premium stainless steel commercial kitchen equipment manufacturer in Hyderabad. SS-304 work tables, exhaust hoods, cold storage, cooking ranges for restaurants, hotels & cloud kitchens."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+/* ===== RESET ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Roboto',sans-serif;background:#090c0f;color:#c8d6e5;line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+input,textarea,select{font-family:inherit}
+
+/* ===== VARS ===== */
+:root{
+  --bg:#090c0f;--bg2:#1c2125;--primary:#0057b3;--primary-l:#1a7fe0;
+  --text:#c8d6e5;--muted:#556577;--border:#1e2a35;--card:#1c2125;
+  --fh:'Montserrat',sans-serif;--fm:'Roboto Mono',monospace;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--primary)}
+
+/* ===== BUTTONS ===== */
+@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(90deg,#0057b3,#1a7fe0,#0057b3);background-size:200% auto;
+  animation:shimmer 3s linear infinite;color:#fff;font-family:var(--fh);font-size:11px;
+  letter-spacing:.15em;border:none;border-radius:50px;padding:13px 30px;cursor:pointer;transition:opacity .3s;
+}
+.btn-primary:hover{opacity:.9}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:8px;
+  background:transparent;color:#c8d6e5;font-family:var(--fh);font-size:11px;
+  letter-spacing:.15em;border:1px solid rgba(200,214,229,.2);border-radius:50px;padding:13px 30px;cursor:pointer;transition:all .3s;
+}
+.btn-outline:hover{background:rgba(200,214,229,.06)}
+
+/* ===== GRID BG ===== */
+.grid-bg{
+  position:absolute;inset:0;pointer-events:none;opacity:.03;
+  background-image:linear-gradient(rgba(200,214,229,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(200,214,229,.5) 1px,transparent 1px);
+  background-size:80px 80px;
+}
+
+/* ===== HEADER ===== */
+#hdr{position:fixed;top:0;left:0;right:0;z-index:200;transition:all .5s}
+#hdr.scrolled{background:rgba(9,12,15,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);box-shadow:0 4px 40px rgba(0,0,0,.4)}
+.hdr-in{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:12px;cursor:pointer}
+.logo-box{width:32px;height:32px;border:1px solid var(--primary);display:flex;align-items:center;justify-content:center}
+.logo-sq{width:16px;height:16px;background:var(--primary)}
+.logo-name{font-family:var(--fh);font-weight:700;color:#fff;font-size:13px;letter-spacing:.15em}
+.logo-sub{display:block;font-family:var(--fm);font-size:10px;color:var(--muted);letter-spacing:.2em}
+.desk-nav{display:flex;align-items:center;gap:24px}
+.desk-nav a{font-family:var(--fh);font-size:11px;letter-spacing:.13em;color:var(--muted);transition:color .3s;cursor:pointer}
+.desk-nav a:hover,.desk-nav a.active{color:var(--primary)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+.ham span{display:block;width:22px;height:2px;background:#c8d6e5;transition:all .3s}
+.mob-nav{
+  display:none;position:fixed;inset-y:0;right:0;width:300px;background:var(--card);
+  border-left:1px solid var(--border);z-index:210;padding:80px 0 32px;
+  transform:translateX(100%);transition:transform .35s cubic-bezier(.25,.46,.45,.94);
+}
+.mob-nav.open{transform:translateX(0)}
+.mob-nav a{display:block;font-family:var(--fh);font-size:13px;letter-spacing:.13em;color:var(--muted);padding:13px 24px;border-left:2px solid transparent;transition:all .2s;cursor:pointer}
+.mob-nav a:hover,.mob-nav a.active{color:var(--primary);border-left-color:var(--primary);background:rgba(0,87,179,.05)}
+.mob-footer{padding:20px 24px;border-top:1px solid var(--border);margin-top:8px}
+#ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:205}
+#ov.show{display:block}
+@media(max-width:1023px){.desk-nav{display:none}.hdr-btn{display:none!important}.ham{display:flex}.mob-nav{display:block}}
+
+/* ===== PAGES ===== */
+.page{display:none;min-height:100vh}
+.page.active{display:block}
+
+/* ===== SECTION UTILS ===== */
+.sec{padding:80px 0}
+.sec-lg{padding:120px 0}
+.cnt{max-width:1280px;margin:0 auto;padding:0 24px}
+.sh{margin-bottom:56px}
+.sh.c{text-align:center}
+.sh.c .sd{margin-left:auto;margin-right:auto}
+.sh.c .div{margin-left:auto;margin-right:auto}
+.sl{font-family:var(--fm);font-size:11px;letter-spacing:.2em;color:var(--primary);margin-bottom:12px;display:block}
+.st{font-family:var(--fh);font-weight:700;font-size:clamp(22px,3.5vw,40px);color:#fff;text-transform:uppercase;letter-spacing:.08em;line-height:1.2}
+.sd{color:var(--muted);margin-top:14px;max-width:600px;line-height:1.7;font-size:15px}
+.div{width:60px;height:2px;background:var(--primary);margin-top:22px}
+
+/* ===== HERO ===== */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero-ov1{position:absolute;inset:0;background:linear-gradient(to right,#090c0f 0%,rgba(9,12,15,.85) 55%,rgba(9,12,15,.35) 100%)}
+.hero-ov2{position:absolute;inset:0;background:linear-gradient(to top,#090c0f 0%,transparent 50%,rgba(9,12,15,.25) 100%)}
+.hero-cnt{position:relative;max-width:1280px;margin:0 auto;padding:130px 24px 80px;max-width:700px}
+.hero-label{font-family:var(--fm);font-size:11px;letter-spacing:.3em;color:var(--primary);margin-bottom:20px;display:block;opacity:0;animation:fadeup .8s .2s ease forwards}
+.hero-h1{font-family:var(--fh);font-weight:900;font-size:clamp(38px,6vw,78px);color:#fff;line-height:1.05;letter-spacing:.05em;text-transform:uppercase;margin-bottom:24px;opacity:0;animation:fadeup .8s .4s ease forwards}
+.hero-h1 span{color:var(--primary)}
+.hero-p{color:rgba(200,214,229,.72);font-size:17px;max-width:520px;line-height:1.75;margin-bottom:40px;opacity:0;animation:fadeup .8s .6s ease forwards}
+.hero-btns{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:64px;opacity:0;animation:fadeup .8s .8s ease forwards}
+.hero-stats{display:flex;gap:44px;flex-wrap:wrap;opacity:0;animation:fadeup .8s 1s ease forwards}
+.sv{font-family:var(--fh);font-weight:700;font-size:28px;color:#fff;display:block}
+.slb{font-family:var(--fm);font-size:11px;letter-spacing:.15em;color:var(--muted);margin-top:4px;display:block}
+@keyframes fadeup{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+
+/* ===== SCROLL ANIMATIONS ===== */
+.aos{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.aos.in{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+/* ===== CAT GRID ===== */
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:900px){.cat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.cat-grid{grid-template-columns:1fr}}
+.cat-card{position:relative;overflow:hidden;border:1px solid var(--border);aspect-ratio:4/3;cursor:pointer;display:block}
+.cat-card img{width:100%;height:100%;object-fit:cover;transition:all .7s}
+.cat-card:hover img{transform:scale(1.1);filter:grayscale(1)}
+.cat-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(9,12,15,.95) 0%,rgba(9,12,15,.35) 65%,transparent 100%)}
+.cat-spec{position:absolute;inset:0;background:rgba(9,12,15,.82);opacity:0;transition:opacity .5s;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center}
+.cat-card:hover .cat-spec{opacity:1}
+.cat-bot{position:absolute;bottom:0;left:0;right:0;padding:18px 20px;display:flex;align-items:flex-end;justify-content:space-between}
+.cat-name{font-family:var(--fh);font-size:12px;letter-spacing:.1em;color:#fff;font-weight:700;text-transform:uppercase}
+.cat-arr{width:30px;height:30px;border:1px solid rgba(200,214,229,.2);display:flex;align-items:center;justify-content:center;transition:all .3s;flex-shrink:0}
+.cat-card:hover .cat-arr{border-color:var(--primary);background:var(--primary)}
+.spec-lbl{font-family:var(--fm);font-size:10px;letter-spacing:.15em;color:var(--primary);margin-bottom:8px;display:block}
+.spec-txt{font-family:var(--fm);font-size:13px;color:#c8d6e5}
+
+/* ===== WHY GRID ===== */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.why-grid{grid-template-columns:1fr}}
+.why-card{padding:30px;border:1px solid var(--border);background:var(--bg);transition:border-color .5s}
+.why-card:hover{border-color:rgba(0,87,179,.3)}
+.why-icon{width:46px;height:46px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:all .3s}
+.why-card:hover .why-icon{border-color:var(--primary);background:rgba(0,87,179,.05)}
+.why-icon svg{width:20px;height:20px;stroke:var(--primary);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.why-t{font-family:var(--fh);font-size:12px;letter-spacing:.1em;color:#fff;font-weight:700;margin-bottom:10px}
+.why-d{color:var(--muted);font-size:13px;line-height:1.7}
+
+/* ===== PROCESS ===== */
+.proc-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+@media(max-width:900px){.proc-layout{grid-template-columns:1fr}}
+.proc-step{display:flex;gap:22px;padding:22px;border:1px solid var(--border);background:rgba(28,33,37,.5);transition:border-color .4s;margin-bottom:8px}
+.proc-step:hover{border-color:rgba(0,87,179,.3)}
+.proc-num{font-family:var(--fm);font-size:26px;font-weight:700;color:rgba(0,87,179,.3);flex-shrink:0;transition:color .3s;line-height:1}
+.proc-step:hover .proc-num{color:var(--primary)}
+.proc-t{font-family:var(--fh);font-size:12px;letter-spacing:.1em;color:#fff;font-weight:700;margin-bottom:7px}
+.proc-d{color:var(--muted);font-size:13px;line-height:1.6}
+.proc-img-wrap{position:relative}
+.proc-img-wrap img{width:100%;border:1px solid var(--border);aspect-ratio:4/3;object-fit:cover}
+.proc-badge{position:absolute;bottom:-14px;right:-14px;background:var(--primary);padding:14px}
+.proc-badge span{font-family:var(--fm);font-size:11px;color:#fff;letter-spacing:.15em;white-space:nowrap}
+@media(max-width:900px){.proc-img-wrap{display:none}}
+
+/* ===== PROD GRID ===== */
+.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:1100px){.prod-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.prod-grid{grid-template-columns:1fr}}
+.prod-card{border:1px solid var(--border);background:var(--card);overflow:hidden;transition:border-color .4s;cursor:pointer}
+.prod-card:hover{border-color:rgba(0,87,179,.35)}
+.prod-img{aspect-ratio:1;overflow:hidden;background:var(--bg);position:relative}
+.prod-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.prod-card:hover .prod-img img{transform:scale(1.1)}
+.prod-badge{position:absolute;top:10px;left:10px;font-family:var(--fm);font-size:10px;letter-spacing:.12em;color:var(--primary);background:rgba(9,12,15,.9);padding:4px 10px;border:1px solid var(--border)}
+.prod-info{padding:18px}
+.prod-name{font-family:var(--fh);font-size:13px;letter-spacing:.04em;color:#fff;font-weight:700;margin-bottom:10px}
+.prod-specs{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}
+.prod-tag{font-family:var(--fm);font-size:10px;color:var(--muted);background:var(--bg);padding:3px 8px}
+.prod-foot{display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid var(--border)}
+.prod-price{font-family:var(--fh);font-size:13px;color:var(--primary);font-weight:700}
+.prod-link{font-family:var(--fm);font-size:11px;color:var(--muted);transition:color .3s}
+.prod-card:hover .prod-link{color:var(--primary)}
+
+/* ===== 3-COL PROD GRID (products page) ===== */
+.prod-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.prod-grid3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.prod-grid3{grid-template-columns:1fr}}
+
+/* ===== FILTER BTNS ===== */
+.filter-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.flt-btn{font-family:var(--fm);font-size:11px;letter-spacing:.1em;padding:7px 14px;border:1px solid var(--border);color:var(--muted);background:none;cursor:pointer;transition:all .3s}
+.flt-btn:hover{border-color:rgba(200,214,229,.3)}
+.flt-btn.active{border-color:var(--primary);background:rgba(0,87,179,.1);color:var(--primary)}
+.search-wrap{position:relative;margin-bottom:28px}
+.search-wrap svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;stroke:var(--muted);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.search-input{width:100%;max-width:280px;background:var(--card);border:1px solid var(--border);color:#c8d6e5;font-size:13px;padding:9px 14px 9px 38px;outline:none;transition:border-color .3s}
+.search-input::placeholder{color:var(--muted)}
+.search-input:focus{border-color:rgba(0,87,179,.5)}
+.filters-row{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:32px}
+
+/* ===== CLIENTS ===== */
+.clients-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:700px){.clients-grid{grid-template-columns:repeat(2,1fr)}}
+.client-box{border:1px solid var(--border);background:rgba(28,33,37,.5);height:74px;display:flex;align-items:center;justify-content:center;transition:border-color .3s}
+.client-box:hover{border-color:rgba(0,87,179,.3)}
+.client-name{font-family:var(--fh);font-size:11px;letter-spacing:.18em;color:var(--muted)}
+
+/* ===== CTA BANNER ===== */
+.cta-sec{position:relative;padding:80px 0;overflow:hidden}
+.cta-sec-bg{position:absolute;inset:0}
+.cta-sec-bg img{width:100%;height:100%;object-fit:cover}
+.cta-sec-ov{position:absolute;inset:0;background:rgba(9,12,15,.87)}
+.cta-cnt{position:relative;text-align:center;max-width:800px;margin:0 auto;padding:0 24px}
+.cta-h{font-family:var(--fh);font-weight:900;font-size:clamp(26px,4vw,50px);color:#fff;text-transform:uppercase;letter-spacing:.05em;line-height:1.2;margin-bottom:18px}
+.cta-p{color:rgba(200,214,229,.72);font-size:16px;max-width:560px;margin:0 auto 36px;line-height:1.75}
+.cta-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+
+/* ===== ABOUT ===== */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:900px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+.stat-box{text-align:center;padding:24px 16px;border:1px solid var(--border);background:var(--bg)}
+.stat-icon{width:24px;height:24px;stroke:var(--primary);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin:0 auto 12px}
+.stat-v{font-family:var(--fh);font-weight:700;font-size:30px;color:#fff;display:block}
+.stat-l{font-family:var(--fm);font-size:10px;letter-spacing:.15em;color:var(--muted);margin-top:6px;display:block}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+@media(max-width:900px){.story-grid{grid-template-columns:1fr}}
+.story-img{border:1px solid var(--border);overflow:hidden}
+.story-img img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.story-p{color:var(--muted);font-size:14px;line-height:1.8;margin-bottom:16px}
+.timeline-item{display:flex;gap:20px;padding:20px 24px;border-bottom:1px solid var(--border);transition:background .3s}
+.timeline-item:last-child{border-bottom:none}
+.timeline-item:hover{background:rgba(28,33,37,.5)}
+.t-year{font-family:var(--fm);font-size:20px;font-weight:700;color:rgba(0,87,179,.35);flex-shrink:0;width:56px;transition:color .3s}
+.timeline-item:hover .t-year{color:var(--primary)}
+.t-title{font-family:var(--fh);font-size:13px;letter-spacing:.04em;color:#fff;font-weight:700;margin-bottom:5px}
+.t-desc{color:var(--muted);font-size:13px;line-height:1.6}
+
+/* ===== CUSTOM SOLUTIONS ===== */
+.bp-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.bp-grid{grid-template-columns:1fr}}
+.bp-card{border:1px solid var(--border);overflow:hidden;position:relative}
+.bp-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.bp-label{position:absolute;bottom:0;left:0;right:0;background:rgba(9,12,15,.92);padding:12px 16px;border-top:1px solid var(--border)}
+.bp-label span{font-family:var(--fm);font-size:11px;letter-spacing:.15em;color:var(--primary)}
+.cap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(max-width:700px){.cap-grid{grid-template-columns:1fr}}
+.cap-card{display:flex;gap:20px;padding:24px 28px;border:1px solid var(--border);background:var(--bg);transition:border-color .4s}
+.cap-card:hover{border-color:rgba(0,87,179,.3)}
+.cap-icon{width:46px;height:46px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s}
+.cap-card:hover .cap-icon{border-color:var(--primary);background:rgba(0,87,179,.06)}
+.cap-icon svg{width:20px;height:20px;stroke:var(--primary);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.cap-t{font-family:var(--fh);font-size:12px;letter-spacing:.1em;color:#fff;font-weight:700;margin-bottom:8px}
+.cap-d{color:var(--muted);font-size:13px;line-height:1.7}
+
+/* ===== PROJECTS ===== */
+.proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+@media(max-width:700px){.proj-grid{grid-template-columns:1fr}}
+.proj-card{border:1px solid var(--border);background:var(--card);overflow:hidden;transition:border-color .4s}
+.proj-card:hover{border-color:rgba(0,87,179,.3)}
+.proj-img{aspect-ratio:16/9;overflow:hidden;position:relative}
+.proj-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.proj-card:hover .proj-img img{transform:scale(1.05)}
+.proj-type{position:absolute;top:10px;left:10px;font-family:var(--fm);font-size:10px;letter-spacing:.12em;color:var(--primary);background:rgba(9,12,15,.9);padding:4px 10px;border:1px solid var(--border)}
+.proj-body{padding:22px}
+.proj-name{font-family:var(--fh);font-size:16px;letter-spacing:.04em;color:#fff;font-weight:700;margin-bottom:10px}
+.proj-meta{display:flex;gap:16px;margin-bottom:10px}
+.proj-meta span{font-family:var(--fm);font-size:11px;color:var(--muted);display:flex;align-items:center;gap:5px}
+.proj-meta svg{width:12px;height:12px;stroke:var(--muted);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.proj-desc{color:var(--muted);font-size:13px;line-height:1.7}
+
+/* ===== CONTACT ===== */
+.contact-layout{display:grid;grid-template-columns:1fr 2fr;gap:40px;align-items:start}
+@media(max-width:900px){.contact-layout{grid-template-columns:1fr}}
+.info-card{display:flex;gap:14px;padding:18px;border:1px solid var(--border);background:var(--card);margin-bottom:12px}
+.info-icon{width:38px;height:38px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.info-icon svg{width:15px;height:15px;stroke:var(--primary);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.info-t{font-family:var(--fh);font-size:11px;letter-spacing:.1em;color:#fff;font-weight:700;margin-bottom:7px}
+.info-l{color:var(--muted);font-size:13px;line-height:1.6}
+.map-box{border:1px solid var(--border);background:var(--card);height:180px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;margin-top:12px}
+.map-box svg{width:30px;height:30px;stroke:var(--primary);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.map-box span{font-family:var(--fm);font-size:11px;color:var(--muted);letter-spacing:.1em}
+.form-ht{font-family:var(--fh);font-size:18px;letter-spacing:.08em;color:#fff;font-weight:700;text-transform:uppercase;margin-bottom:24px}
+
+/* ===== FORMS ===== */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.form-grid{grid-template-columns:1fr}}
+.fg{margin-bottom:0}
+.fg-full{grid-column:1/-1}
+.fi{width:100%;background:var(--card);border:1px solid var(--border);color:#c8d6e5;font-size:13px;padding:12px 14px;outline:none;transition:border-color .3s}
+.fi::placeholder{color:var(--muted)}
+.fi:focus{border-color:rgba(0,87,179,.55)}
+textarea.fi{min-height:110px;resize:vertical}
+select.fi{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23556577' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}
+.form-note{font-family:var(--fm);font-size:11px;color:rgba(85,101,119,.65);line-height:1.6;margin-top:4px}
+.form-success{text-align:center;padding:40px 24px}
+.fs-icon{width:56px;height:56px;stroke:var(--primary);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin:0 auto 18px;display:block}
+.fs-t{font-family:var(--fh);font-size:18px;color:#fff;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.fs-d{color:var(--muted);font-size:13px;line-height:1.7}
+
+/* ===== QUOTE BUILDER ===== */
+.qb-layout{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start}
+@media(max-width:1023px){.qb-layout{grid-template-columns:1fr}}
+.qb-ht{font-family:var(--fh);font-size:12px;letter-spacing:.15em;color:#fff;font-weight:700;margin-bottom:18px}
+.acc-block{margin-bottom:8px}
+.acc-hdr{display:flex;justify-content:space-between;align-items:center;padding:15px 20px;background:var(--card);border:1px solid var(--border);cursor:pointer;transition:background .25s}
+.acc-hdr:hover{background:rgba(28,33,37,.8)}
+.acc-title{font-family:var(--fh);font-size:11px;letter-spacing:.1em;color:#fff;font-weight:700}
+.acc-chev{width:14px;height:14px;stroke:var(--muted);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s}
+.acc-chev.open{transform:rotate(180deg)}
+.acc-body{border:1px solid var(--border);border-top:none;overflow:hidden;max-height:0;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
+.acc-body.open{max-height:800px}
+.qb-item{display:flex;align-items:center;justify-content:space-between;padding:13px 20px;border-bottom:1px solid var(--border);background:var(--bg);transition:background .2s;gap:10px}
+.qb-item:last-child{border-bottom:none}
+.qb-item:hover{background:rgba(28,33,37,.4)}
+.qb-item-info{flex:1;min-width:0}
+.qb-item-name{font-size:13px;color:#c8d6e5;font-weight:500}
+.qb-tags{display:flex;gap:5px;margin-top:4px;flex-wrap:wrap}
+.qb-tag{font-family:var(--fm);font-size:10px;color:var(--muted);background:var(--card);padding:2px 7px}
+.qb-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.qb-price{font-family:var(--fh);font-size:13px;color:var(--primary);font-weight:700;white-space:nowrap}
+.add-btn{border:1px solid var(--border);padding:5px 10px;font-family:var(--fm);font-size:11px;color:var(--muted);display:flex;align-items:center;gap:4px;transition:all .3s;background:none;cursor:pointer;white-space:nowrap}
+.add-btn:hover{border-color:var(--primary);color:var(--primary)}
+.qty-ctrl{display:flex;align-items:center;gap:8px;border:1px solid rgba(0,87,179,.35);padding:4px 8px}
+.qty-btn{background:none;border:none;cursor:pointer;color:var(--muted);transition:color .2s;display:flex;align-items:center;justify-content:center}
+.qty-btn:hover{color:var(--primary)}
+.qty-val{font-family:var(--fm);font-size:13px;color:#c8d6e5;min-width:18px;text-align:center}
+
+/* ===== CART PANEL ===== */
+.cart-panel{background:var(--card);border:1px solid var(--border);position:sticky;top:88px}
+.cart-hdr{display:flex;align-items:center;gap:8px;padding:15px 20px;border-bottom:1px solid var(--border);background:rgba(28,33,37,.5)}
+.cart-hdr-t{font-family:var(--fh);font-size:11px;letter-spacing:.15em;color:#fff;font-weight:700}
+.cart-cnt{font-family:var(--fm);font-size:11px;background:var(--primary);color:#fff;padding:2px 9px;border-radius:50px;margin-left:auto;display:none}
+.cart-empty{padding:44px 20px;text-align:center}
+.cart-empty svg{opacity:.2;margin:0 auto 12px;display:block}
+.cart-empty-t{font-family:var(--fm);font-size:11px;color:var(--muted);letter-spacing:.1em}
+.cart-lines{border-bottom:1px solid var(--border);display:none}
+.cart-line{display:flex;justify-content:space-between;align-items:flex-start;padding:11px 20px;gap:8px;border-bottom:1px solid var(--border)}
+.cart-line:last-child{border-bottom:none}
+.cl-name{font-size:12px;color:#c8d6e5}
+.cl-sub{font-family:var(--fm);font-size:11px;color:var(--muted);margin-top:3px}
+.cl-r{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.cl-price{font-family:var(--fm);font-size:12px;color:var(--primary)}
+.cl-rm{background:none;border:none;cursor:pointer;color:var(--muted);transition:color .2s;display:flex}
+.cl-rm:hover{color:#e55}
+.cart-opts{padding:14px 20px;border-bottom:1px solid var(--border);display:flex;flex-direction:column;gap:12px}
+.opt-lbl{font-family:var(--fm);font-size:10px;letter-spacing:.15em;color:var(--muted);margin-bottom:6px;display:block}
+.opt-sel{width:100%;background:var(--bg);border:1px solid var(--border);color:#c8d6e5;font-family:var(--fm);font-size:12px;padding:8px 12px;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23556577' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;padding-right:30px;outline:none}
+.cart-tots{padding:14px 20px;border-bottom:1px solid var(--border);background:rgba(9,12,15,.3);display:none;flex-direction:column;gap:7px}
+.tot-row{display:flex;justify-content:space-between;align-items:center}
+.tot-lbl{font-family:var(--fm);font-size:11px;color:var(--muted)}
+.tot-val{font-family:var(--fm);font-size:12px;color:#c8d6e5}
+.tot-div{border:none;border-top:1px solid var(--border);margin:4px 0}
+.grand-lbl{font-family:var(--fh);font-size:14px;color:#fff;font-weight:700}
+.grand-val{font-family:var(--fh);font-size:16px;color:var(--primary);font-weight:700}
+.cart-note{font-family:var(--fm);font-size:10px;color:rgba(85,101,119,.55);margin-top:4px}
+.cart-act{padding:14px 20px}
+#proceed-btn{width:100%;opacity:.4;cursor:not-allowed}
+#proceed-btn.enabled{opacity:1;cursor:pointer}
+
+/* ===== QUOTE MODAL ===== */
+.modal-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:300;align-items:center;justify-content:center;padding:24px}
+.modal-ov.show{display:flex}
+.modal{background:var(--card);border:1px solid var(--border);max-width:560px;width:100%;max-height:90vh;overflow-y:auto}
+.modal-hdr{padding:18px 24px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.modal-t{font-family:var(--fh);font-size:12px;letter-spacing:.1em;color:#fff;font-weight:700}
+.modal-cls{background:none;border:none;cursor:pointer;color:var(--muted);font-size:22px;line-height:1;transition:color .2s}
+.modal-cls:hover{color:#fff}
+.modal-body{padding:24px}
+.mos{background:var(--bg);border:1px solid var(--border);padding:16px;margin-bottom:20px}
+.mos-t{font-family:var(--fh);font-size:11px;letter-spacing:.1em;color:var(--muted);margin-bottom:12px}
+.mos-line{display:flex;justify-content:space-between;padding:4px 0;font-size:12px}
+.mos-ln{color:#c8d6e5}
+.mos-lp{font-family:var(--fm);color:var(--primary)}
+.mos-tot{display:flex;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border);margin-top:6px}
+.mos-tl{font-family:var(--fh);font-size:13px;color:#fff;font-weight:700}
+.mos-tv{font-family:var(--fh);font-size:15px;color:var(--primary);font-weight:700}
+
+/* ===== FLOATING COMM ===== */
+#fc{position:fixed;bottom:24px;right:24px;z-index:150}
+.fc-popup{position:absolute;bottom:calc(100% + 12px);right:0;width:272px;background:var(--card);border:1px solid var(--border);border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.5);overflow:hidden;opacity:0;transform:scale(.9) translateY(10px);pointer-events:none;transition:all .3s cubic-bezier(.34,1.56,.64,1);transform-origin:bottom right}
+.fc-popup.show{opacity:1;transform:scale(1) translateY(0);pointer-events:all}
+.fc-head{background:var(--primary);padding:14px}
+.fc-ht{font-family:var(--fh);font-size:11px;letter-spacing:.1em;color:#fff}
+.fc-sub{font-size:12px;color:rgba(255,255,255,.7);margin-top:3px}
+.fc-body{padding:12px;display:flex;flex-direction:column;gap:8px}
+.fc-link{display:flex;align-items:center;gap:12px;padding:9px 12px;border-radius:5px;background:var(--bg);transition:background .2s}
+.fc-link:hover{background:rgba(28,33,37,.8)}
+.fc-ic{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px}
+.fc-lt{font-size:13px;font-weight:600;color:#c8d6e5}
+.fc-ls{font-size:11px;color:var(--muted)}
+.fc-btn{width:54px;height:54px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 20px rgba(37,211,102,.3);transition:all .3s;border:none}
+.fc-btn.active{background:var(--card);border:1px solid var(--border);box-shadow:none}
+.fc-btn svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:stroke .3s}
+.fc-btn.active svg{stroke:#c8d6e5}
+
+/* ===== FOOTER ===== */
+footer{background:var(--card);border-top:1px solid var(--border)}
+.foot-in{max-width:1280px;margin:0 auto;padding:56px 24px 0}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:36px}
+@media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.foot-grid{grid-template-columns:1fr}}
+.foot-brand-p{color:var(--muted);font-size:13px;line-height:1.7;margin-top:14px}
+.foot-ct{font-family:var(--fh);font-size:11px;letter-spacing:.15em;color:#fff;margin-bottom:18px}
+.foot-links{display:flex;flex-direction:column;gap:9px}
+.foot-links a{color:var(--muted);font-size:13px;transition:color .3s;cursor:pointer}
+.foot-links a:hover{color:var(--primary)}
+.foot-ci{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:13px;margin-bottom:13px;transition:color .3s}
+.foot-ci:hover{color:var(--primary)}
+.foot-ci svg{width:15px;height:15px;stroke:var(--primary);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px}
+.foot-bot{border-top:1px solid var(--border);margin-top:44px;padding:26px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.foot-copy{font-family:var(--fm);font-size:11px;color:var(--muted)}
+.foot-bot-r{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.dev-credit{font-family:var(--fm);font-size:11px;color:var(--muted);transition:color .3s}
+.dev-credit:hover{color:var(--primary)}
+.dev-credit span{color:var(--primary);font-weight:700}
+.foot-sep{color:var(--border);font-size:14px}
+
+/* ===== MISC ===== */
+.bg-card2{background:var(--card)}
+.border-y{border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.border-b{border-bottom:1px solid var(--border)}
+.view-all-wrap{text-align:center;margin-top:36px}
+.view-all-wrap a{font-family:var(--fh);font-size:11px;letter-spacing:.15em;color:var(--primary);display:inline-flex;align-items:center;gap:8px;transition:opacity .3s;cursor:pointer}
+.view-all-wrap a:hover{opacity:.8}
+.page-hero{position:relative;padding:80px 0 56px;overflow:hidden}
+.page-hero-bg{position:absolute;inset:0}
+.page-hero-bg img{width:100%;height:100%;object-fit:cover}
+.page-hero-ov{position:absolute;inset:0;background:rgba(9,12,15,.9)}
+.page-hero-cnt{position:relative;max-width:1280px;margin:0 auto;padding:0 24px}
+.page-hl{font-family:var(--fm);font-size:11px;letter-spacing:.3em;color:var(--primary);margin-bottom:16px;display:block}
+.page-h1{font-family:var(--fh);font-weight:900;font-size:clamp(34px,5vw,64px);color:#fff;text-transform:uppercase;letter-spacing:.05em;line-height:1.1}
+.page-h1 span{color:var(--primary)}
+.page-desc{color:rgba(200,214,229,.72);font-size:16px;max-width:600px;margin-top:18px;line-height:1.75}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="hdr">
+  <div class="hdr-in">
+    <div class="logo" onclick="showPage('home')">
+      <div class="logo-box"><div class="logo-sq"></div></div>
+      <div><span class="logo-name">STEELCRAFT</span><span class="logo-sub">HYDERABAD</span></div>
+    </div>
+    <nav class="desk-nav" id="desk-nav">
+      <a onclick="showPage('home')" class="active" data-page="home">HOME</a>
+      <a onclick="showPage('about')" data-page="about">ABOUT</a>
+      <a onclick="showPage('products')" data-page="products">PRODUCTS</a>
+      <a onclick="showPage('custom')" data-page="custom">CUSTOM SOLUTIONS</a>
+      <a onclick="showPage('projects')" data-page="projects">PROJECTS</a>
+      <a onclick="showPage('quote')" data-page="quote">QUOTE BUILDER</a>
+      <a onclick="showPage('contact')" data-page="contact">CONTACT</a>
+    </nav>
+    <button class="btn-primary hdr-btn" onclick="showPage('contact')" style="padding:10px 22px;font-size:11px">REQUEST QUOTE</button>
+    <div class="ham" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<nav class="mob-nav" id="mob-nav">
+  <a onclick="showPage('home');closeMenu()" data-page="home">HOME</a>
+  <a onclick="showPage('about');closeMenu()" data-page="about">ABOUT</a>
+  <a onclick="showPage('products');closeMenu()" data-page="products">PRODUCTS</a>
+  <a onclick="showPage('custom');closeMenu()" data-page="custom">CUSTOM SOLUTIONS</a>
+  <a onclick="showPage('projects');closeMenu()" data-page="projects">PROJECTS</a>
+  <a onclick="showPage('quote');closeMenu()" data-page="quote">QUOTE BUILDER</a>
+  <a onclick="showPage('contact');closeMenu()" data-page="contact">CONTACT</a>
+  <div class="mob-footer">
+    <button class="btn-primary" style="width:100%;justify-content:center" onclick="showPage('contact');closeMenu()">REQUEST QUOTE</button>
+    <a href="tel:+919876543210" style="display:flex;align-items:center;gap:8px;margin-top:14px;color:var(--muted);font-size:13px">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.81 3.38 2 2 0 0 1 3.7 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8a16 16 0 0 0 5.49 5.49l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 15z"/></svg>
+      +91 98765 43210
+    </a>
+  </div>
+</nav>
+<div id="ov" onclick="closeMenu()"></div>
+
+<!-- ================================================================ -->
+<!-- PAGE: HOME -->
+<!-- ================================================================ -->
+<div class="page active" id="page-home">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/871431a1e_generated_cd7eae14.png" alt="Commercial Kitchen" /></div>
+    <div class="hero-ov1"></div><div class="hero-ov2"></div><div class="grid-bg"></div>
+    <div class="hero-cnt">
+      <span class="hero-label"></span>
+      <h1 class="hero-h1">PRECISION<br>STAINLESS STEEL<br><span>SOLUTIONS</span></h1>
+      <p class="hero-p">Engineering commercial kitchen excellence for restaurants, hotels, and cloud kitchens. SS-304 grade equipment built to withstand the demands of professional food service.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="showPage('quote')">REQUEST A QUOTE <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+        <button class="btn-outline" onclick="showPage('products')">VIEW PRODUCTS</button>
+      </div>
+      <div class="hero-stats">
+        <div><span class="sv">500+</span><span class="slb">PROJECTS</span></div>
+        <div><span class="sv">18+</span><span class="slb">YEARS</span></div>
+        <div><span class="sv">100%</span><span class="slb">SS-304</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="sec-lg">
+    <div class="cnt">
+      <div class="sh c aos"><span class="sl">// PRODUCT CATEGORIES</span><h2 class="st">ENGINEERED FOR PERFORMANCE</h2><p class="sd">Each product line is precision-manufactured from food-grade stainless steel, designed to meet the rigorous demands of commercial kitchen environments.</p><div class="div"></div></div>
+      <div class="cat-grid">
+        <a class="cat-card aos" onclick="showPage('products')"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/0e2ae5527_generated_3738762d.png" alt="Work Tables" loading="lazy"/><div class="cat-ov"></div><div class="cat-spec"><span class="spec-lbl">SPECIFICATIONS</span><span class="spec-txt">SS-304 | 16-18 Gauge | Custom Sizes</span></div><div class="cat-bot"><span class="cat-name">WORK TABLES</span><div class="cat-arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+        <a class="cat-card aos d1" onclick="showPage('products')"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/309b31b82_generated_0853dc60.png" alt="Exhaust Hoods" loading="lazy"/><div class="cat-ov"></div><div class="cat-spec"><span class="spec-lbl">SPECIFICATIONS</span><span class="spec-txt">SS-304/430 | Baffle Filters | LED Integrated</span></div><div class="cat-bot"><span class="cat-name">EXHAUST HOODS</span><div class="cat-arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+        <a class="cat-card aos d2" onclick="showPage('products')"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/4b8b4dab3_generated_6761957a.png" alt="Cold Storage" loading="lazy"/><div class="cat-ov"></div><div class="cat-spec"><span class="spec-lbl">SPECIFICATIONS</span><span class="spec-txt">SS-304 Interior | CFC-Free | -25°C to 10°C</span></div><div class="cat-bot"><span class="cat-name">COLD STORAGE</span><div class="cat-arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+        <a class="cat-card aos d3" onclick="showPage('products')"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/649ae245e_generated_629481dd.png" alt="Sink Units" loading="lazy"/><div class="cat-ov"></div><div class="cat-spec"><span class="spec-lbl">SPECIFICATIONS</span><span class="spec-txt">SS-304 | 1.2mm Thick | Soundproofed</span></div><div class="cat-bot"><span class="cat-name">SINK UNITS</span><div class="cat-arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+        <a class="cat-card aos d4" onclick="showPage('products')"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/423a4b1e5_generated_7bed76ee.png" alt="Cooking Ranges" loading="lazy"/><div class="cat-ov"></div><div class="cat-spec"><span class="spec-lbl">SPECIFICATIONS</span><span class="spec-txt">SS-304 Body | LPG/PNG | Up to 6 Burners</span></div><div class="cat-bot"><span class="cat-name">COOKING RANGES</span><div class="cat-arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+        <a class="cat-card aos d5" onclick="showPage('products')"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/ceb319584_generated_ccbf0dc2.png" alt="Storage Racks" loading="lazy"/><div class="cat-ov"></div><div class="cat-spec"><span class="spec-lbl">SPECIFICATIONS</span><span class="spec-txt">SS-304 | 200kg/Shelf | NSF Certified</span></div><div class="cat-bot"><span class="cat-name">STORAGE RACKS</span><div class="cat-arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose -->
+  <section class="sec-lg bg-card2 border-y">
+    <div class="cnt">
+      <div class="sh c aos"><span class="sl">// WHY STEELCRAFT</span><h2 class="st">THE STEELCRAFT ADVANTAGE</h2><p class="sd">Trust built through two decades of precision manufacturing, serving India's top hospitality brands.</p><div class="div"></div></div>
+      <div class="why-grid">
+        <div class="why-card aos"><div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="why-t">UNMATCHED DURABILITY</div><p class="why-d">SS-304 food-grade stainless steel ensures corrosion resistance and a lifespan exceeding 25 years in commercial environments.</p></div>
+        <div class="why-card aos d1"><div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div><div class="why-t">SUPERIOR HYGIENE</div><p class="why-d">Non-porous surfaces prevent bacterial growth. Easy to sanitize and maintain FSSAI and HACCP compliance standards.</p></div>
+        <div class="why-card aos d2"><div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div><div class="why-t">CUSTOM FABRICATION</div><p class="why-d">Every kitchen is unique. We design and fabricate equipment tailored to your exact space, workflow, and capacity requirements.</p></div>
+        <div class="why-card aos d3"><div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div><div class="why-t">ISO CERTIFIED</div><p class="why-d">Our manufacturing processes meet ISO 9001:2015 quality standards with rigorous multi-stage quality control.</p></div>
+        <div class="why-card aos d4"><div class="why-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><div class="why-t">PAN-INDIA DELIVERY</div><p class="why-d">From our Hyderabad facility, we deliver and install across all major cities with professional on-site support.</p></div>
+        <div class="why-card aos d5"><div class="why-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><div class="why-t">AFTER-SALES SUPPORT</div><p class="why-d">Comprehensive warranty coverage with dedicated service teams for maintenance, repairs, and spare parts.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="sec-lg" style="position:relative;overflow:hidden"><div class="grid-bg"></div>
+    <div class="cnt">
+      <div class="sh aos"><span class="sl">// MANUFACTURING</span><h2 class="st">FROM BLUEPRINT TO REALITY</h2><p class="sd">A meticulous 5-step process ensuring every piece of equipment meets our exacting quality standards.</p><div class="div"></div></div>
+      <div class="proc-layout">
+        <div>
+          <div class="proc-step aos"><span class="proc-num">01</span><div><div class="proc-t">CONSULTATION</div><p class="proc-d">In-depth site survey and requirement analysis with our design engineers.</p></div></div>
+          <div class="proc-step aos d1"><span class="proc-num">02</span><div><div class="proc-t">CAD DESIGN</div><p class="proc-d">Precision 3D modeling and technical drawings for approval before fabrication.</p></div></div>
+          <div class="proc-step aos d2"><span class="proc-num">03</span><div><div class="proc-t">FABRICATION</div><p class="proc-d">CNC laser cutting, precision bending, TIG welding, and assembly in our facility.</p></div></div>
+          <div class="proc-step aos d3"><span class="proc-num">04</span><div><div class="proc-t">FINISHING</div><p class="proc-d">Brushed or mirror polish finishing with edge deburring and quality inspection.</p></div></div>
+          <div class="proc-step aos d4"><span class="proc-num">05</span><div><div class="proc-t">INSTALLATION</div><p class="proc-d">Professional on-site installation with plumbing and electrical integration.</p></div></div>
+        </div>
+        <div class="proc-img-wrap aos">
+          <img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/b5ec457f5_generated_03daa924.png" alt="Manufacturing facility"/>
+          <div class="proc-badge"><span>5,000 SQ FT FACILITY</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="sec-lg bg-card2 border-y">
+    <div class="cnt">
+      <div class="sh c aos"><span class="sl">// FEATURED</span><h2 class="st">TOP-SELLING EQUIPMENT</h2><p class="sd">Our most popular commercial kitchen equipment trusted by leading hospitality brands.</p><div class="div"></div></div>
+      <div class="prod-grid">
+        <div class="prod-card aos" onclick="showPage('quote')"><div class="prod-img"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/649ae245e_generated_629481dd.png" alt="Sink" loading="lazy"/><span class="prod-badge">SINK UNITS</span></div><div class="prod-info"><div class="prod-name">Triple Basin Commercial Sink</div><div class="prod-specs"><span class="prod-tag">SS-304</span><span class="prod-tag">18 Gauge</span><span class="prod-tag">1800×600×850mm</span></div><div class="prod-foot"><span class="prod-price">From ₹45,000</span><span class="prod-link">DETAILS →</span></div></div></div>
+        <div class="prod-card aos d1" onclick="showPage('quote')"><div class="prod-img"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/0e2ae5527_generated_3738762d.png" alt="Work Table" loading="lazy"/><span class="prod-badge">WORK TABLES</span></div><div class="prod-info"><div class="prod-name">Heavy Duty Work Table</div><div class="prod-specs"><span class="prod-tag">SS-304</span><span class="prod-tag">16 Gauge</span><span class="prod-tag">1500×750×900mm</span></div><div class="prod-foot"><span class="prod-price">From ₹28,000</span><span class="prod-link">DETAILS →</span></div></div></div>
+        <div class="prod-card aos d2" onclick="showPage('quote')"><div class="prod-img"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/309b31b82_generated_0853dc60.png" alt="Hood" loading="lazy"/><span class="prod-badge">EXHAUST HOODS</span></div><div class="prod-info"><div class="prod-name">Wall-Mount Exhaust Hood</div><div class="prod-specs"><span class="prod-tag">SS-304</span><span class="prod-tag">20 Gauge</span><span class="prod-tag">2400×1000×500mm</span></div><div class="prod-foot"><span class="prod-price">From ₹65,000</span><span class="prod-link">DETAILS →</span></div></div></div>
+        <div class="prod-card aos d3" onclick="showPage('quote')"><div class="prod-img"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/423a4b1e5_generated_7bed76ee.png" alt="Range" loading="lazy"/><span class="prod-badge">COOKING RANGES</span></div><div class="prod-info"><div class="prod-name">6-Burner Commercial Range</div><div class="prod-specs"><span class="prod-tag">SS-304</span><span class="prod-tag">18 Gauge</span><span class="prod-tag">1800×900×850mm</span></div><div class="prod-foot"><span class="prod-price">From ₹85,000</span><span class="prod-link">DETAILS →</span></div></div></div>
+      </div>
+      <div class="view-all-wrap aos"><a onclick="showPage('products')">VIEW ALL PRODUCTS →</a></div>
+    </div>
+  </section>
+
+  <!-- Clients -->
+  <section class="sec">
+    <div class="cnt">
+      <div class="sh c aos"><span class="sl">// TRUSTED BY</span><h2 class="st">OUR CLIENTS</h2><div class="div"></div></div>
+      <div class="clients-grid">
+        <div class="client-box aos"><span class="client-name">FARMAISH RESTAURANTS</span></div>
+        <div class="client-box aos d1"><span class="client-name">TAHAAN CATERERS</span></div>
+        <div class="client-box aos d2"><span class="client-name">ATIAS KITCHEN</span></div>
+        <div class="client-box aos d3"><span class="client-name">KINGS GROUP</span></div>
+        <div class="client-box aos d4"><span class="client-name">MAJLIS</span></div>
+        <div class="client-box aos d5"><span class="client-name">ZEESHAN GROUP</span></div>
+        <div class="client-box aos"><span class="client-name">DECATHLON</span></div>
+        <div class="client-box aos d1"><span class="client-name">OHRIS</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-sec">
+    <div class="cta-sec-bg"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/b5ec457f5_generated_03daa924.png" alt="Factory" loading="lazy"/></div>
+    <div class="cta-sec-ov"></div>
+    <div class="cta-cnt aos">
+      <span class="sl" style="justify-content:center;display:block">// LET'S BUILD</span>
+      <div class="cta-h">READY TO EQUIP YOUR<br><span style="color:var(--primary)">COMMERCIAL KITCHEN?</span></div>
+      <p class="cta-p">Get a free consultation and custom quote for your kitchen project. Our engineers will design the perfect solution for your space.</p>
+      <div class="cta-btns">
+        <button class="btn-primary" onclick="showPage('quote')">GET FREE QUOTE →</button>
+        <a href="tel:+917416619893" class="btn-outline">CALL: +91 74166 19893</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="home-footer"></div>
+</div>
+
+<!-- ================================================================ -->
+<!-- PAGE: ABOUT -->
+<!-- ================================================================ -->
+<div class="page" id="page-about">
+  <div class="page-hero">
+    <div class="page-hero-bg"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/6a873bb88_generated_203ce7b9.png" alt="Factory"/></div>
+    <div class="page-hero-ov"></div>
+    <div class="page-hero-cnt">
+      <span class="page-hl">// ABOUT US</span>
+      <h1 class="page-h1">FORGED IN<br><span>HYDERABAD</span></h1>
+      <p class="page-desc">For over 18 years, SteelCraft Industries has been the trusted name in commercial kitchen equipment manufacturing. From a modest workshop to a 5,000 sq ft facility, our journey is defined by an unwavering commitment to precision and quality.</p>
+    </div>
+  </div>
+
+  <section class="sec bg-card2 border-y">
+    <div class="cnt">
+      <div class="stats-grid">
+        <div class="stat-box aos"><svg class="stat-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="stat-v">18+</span><span class="stat-l">YEARS OF EXPERIENCE</span></div>
+        <div class="stat-box aos d1"><svg class="stat-icon" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg><span class="stat-v">5,000</span><span class="stat-l">SQ FT FACILITY</span></div>
+        <div class="stat-box aos d2"><svg class="stat-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span class="stat-v">500+</span><span class="stat-l">PROJECTS COMPLETED</span></div>
+        <div class="stat-box aos d3"><svg class="stat-icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg><span class="stat-v">ISO</span><span class="stat-l">9001:2015 CERTIFIED</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-lg">
+    <div class="cnt">
+      <div class="story-grid">
+        <div>
+          <div class="sh aos"><span class="sl">// OUR STORY</span><h2 class="st">BUILT ON STEEL, DRIVEN BY PASSION</h2><div class="div"></div></div>
+          <p class="story-p aos">SteelCraft Industries was born from a simple belief: that Indian hospitality deserves world-class kitchen infrastructure. Founded in 2005 by a team of engineers with deep expertise in metallurgy and food service design, we set out to bridge the gap between imported equipment quality and local manufacturing capability.</p>
+          <p class="story-p aos d1">Today, our state-of-the-art facility in Balanagar houses CNC laser cutters, automated bending machines, and a dedicated TIG welding bay. Every piece of equipment undergoes rigorous multi-stage quality checks before leaving our facility.</p>
+          <p class="story-p aos d2">Our client list reads like a who's who of Indian hospitality — from luxury hotels to hospital kitchens, from cloud kitchen operators to institutional caterers. Each project strengthens our resolve to deliver nothing less than perfection.</p>
+        </div>
+        <div class="story-img aos"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/28d9a196e_generated_ba61b30c.png" alt="Fabrication"/></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-lg bg-card2 border-y">
+    <div class="cnt" style="max-width:860px">
+      <div class="sh c aos"><span class="sl">// MILESTONES</span><h2 class="st">OUR JOURNEY</h2><div class="div"></div></div>
+      <div>
+        <div class="timeline-item aos"><span class="t-year">2005</span><div><div class="t-title">Founded in Hyderabad</div><p class="t-desc">Started as a small fabrication workshop with a team of 5 skilled welders.</p></div></div>
+        <div class="timeline-item aos d1"><span class="t-year">2010</span><div><div class="t-title">First Major Hotel Contract</div><p class="t-desc">Commissioned to outfit a 5-star hotel kitchen — a turning point in our growth.</p></div></div>
+        <div class="timeline-item aos d2"><span class="t-year">2015</span><div><div class="t-title">New Manufacturing Facility</div><p class="t-desc">Moved to our 5,000 sq ft state-of-the-art facility in Balanagar Industrial Area.</p></div></div>
+        <div class="timeline-item aos d3"><span class="t-year">2018</span><div><div class="t-title">ISO 9001:2015 Certification</div><p class="t-desc">Achieved international quality management certification.</p></div></div>
+        <div class="timeline-item aos d4"><span class="t-year">2020</span><div><div class="t-title">Cloud Kitchen Boom</div><p class="t-desc">Became the preferred vendor for cloud kitchen operators across South India.</p></div></div>
+        <div class="timeline-item aos d5"><span class="t-year">2024</span><div><div class="t-title">Pan-India Expansion</div><p class="t-desc">Now serving clients in 15+ cities with dedicated installation teams.</p></div></div>
+      </div>
+    </div>
+  </section>
+  <div id="about-footer"></div>
+</div>
+
+<!-- ================================================================ -->
+<!-- PAGE: PRODUCTS -->
+<!-- ================================================================ -->
+<div class="page" id="page-products">
+  <section class="sec-lg border-b" style="padding-top:120px">
+    <div class="cnt">
+      <div class="sh c aos"><span class="sl">// PRODUCT CATALOG</span><h2 class="st">COMMERCIAL KITCHEN EQUIPMENT</h2><p class="sd">Precision-manufactured stainless steel equipment for every commercial kitchen requirement.</p><div class="div"></div></div>
+      <div class="filters-row">
+        <div class="filter-bar" id="filter-bar">
+          <button class="flt-btn active" onclick="filterProducts('all',this)">ALL</button>
+          <button class="flt-btn" onclick="filterProducts('Work Tables',this)">WORK TABLES</button>
+          <button class="flt-btn" onclick="filterProducts('Exhaust Hoods',this)">EXHAUST HOODS</button>
+          <button class="flt-btn" onclick="filterProducts('Cold Storage',this)">COLD STORAGE</button>
+          <button class="flt-btn" onclick="filterProducts('Sink Units',this)">SINK UNITS</button>
+          <button class="flt-btn" onclick="filterProducts('Cooking Ranges',this)">COOKING RANGES</button>
+          <button class="flt-btn" onclick="filterProducts('Storage Racks',this)">STORAGE RACKS</button>
+        </div>
+        <div class="search-wrap"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input class="search-input" placeholder="Search products..." oninput="searchProducts(this.value)" /></div>
+      </div>
+      <div class="prod-grid3" id="products-grid"></div>
+    </div>
+  </section>
+  <div id="products-footer"></div>
+</div>
+
+<!-- ================================================================ -->
+<!-- PAGE: CUSTOM SOLUTIONS -->
+<!-- ================================================================ -->
+<div class="page" id="page-custom">
+  <div class="page-hero" style="position:relative;overflow:hidden">
+    <div class="page-hero-bg" style="opacity:.2"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/cfda0471e_generated_04a57ec8.png" alt="Blueprint"/></div>
+    <div class="page-hero-ov"></div>
+    <div class="page-hero-cnt">
+      <span class="page-hl">// CUSTOM FABRICATION</span>
+      <h1 class="page-h1">YOUR KITCHEN,<br><span>OUR ENGINEERING</span></h1>
+      <p class="page-desc">Every commercial kitchen is unique. We engineer custom stainless steel solutions that match your exact space, workflow, and capacity requirements.</p>
+    </div>
+  </div>
+
+  <section class="sec-lg border-b">
+    <div class="cnt">
+      <div class="sh c aos"><span class="sl">// BLUEPRINT TO REALITY</span><h2 class="st">FROM CONCEPT TO COMPLETION</h2><p class="sd">See how we transform technical drawings into fully operational commercial kitchens.</p><div class="div"></div></div>
+      <div class="bp-grid">
+        <div class="bp-card aos"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/cfda0471e_generated_04a57ec8.png" alt="CAD Blueprint"/><div class="bp-label"><span>01 — CAD DESIGN</span></div></div>
+        <div class="bp-card aos d1"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/b5ec457f5_generated_03daa924.png" alt="Installed Kitchen"/><div class="bp-label"><span>02 — INSTALLED KITCHEN</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-lg bg-card2 border-b">
+    <div class="cnt">
+      <div class="sh c aos"><span class="sl">// CAPABILITIES</span><h2 class="st">WHAT WE CAN BUILD</h2><div class="div"></div></div>
+      <div class="cap-grid">
+        <div class="cap-card aos"><div class="cap-icon"><svg viewBox="0 0 24 24"><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="3" y1="3" x2="3" y2="21"/><line x1="21" y1="3" x2="21" y2="21"/></svg></div><div><div class="cap-t">CUSTOM DIMENSIONS</div><p class="cap-d">Equipment fabricated to your exact kitchen measurements. No standard sizes — only perfect fits.</p></div></div>
+        <div class="cap-card aos d1"><div class="cap-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div><div><div class="cap-t">SPECIALIZED CONFIGURATIONS</div><p class="cap-d">Multi-tier prep stations, integrated sink-table combos, under-counter storage — we build what you need.</p></div></div>
+        <div class="cap-card aos d2"><div class="cap-icon"><svg viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div><div><div class="cap-t">FINISH OPTIONS</div><p class="cap-d">Choose from brushed finish, mirror polish, or satin finish. Color-coded zones available for HACCP compliance.</p></div></div>
+        <div class="cap-card aos d3"><div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><div><div class="cap-t">TURNKEY INSTALLATION</div><p class="cap-d">From design to delivery to installation. We handle plumbing, electrical, and ventilation integration.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-lg">
+    <div class="cnt" style="max-width:860px">
+      <div class="sh c aos"><span class="sl">// GET STARTED</span><h2 class="st">REQUEST A CUSTOM SOLUTION</h2><p class="sd">Tell us about your project and our engineers will get back to you with a detailed proposal.</p><div class="div"></div></div>
+      <div id="custom-form-wrap"><div class="form-grid" id="custom-form">
+        <input class="fi" id="cf-name" placeholder="Full Name *"/>
+        <input class="fi" id="cf-email" type="email" placeholder="Email Address *"/>
+        <input class="fi" id="cf-phone" placeholder="Phone Number *"/>
+        <input class="fi" id="cf-company" placeholder="Company Name"/>
+        <select class="fi" id="cf-type"><option value="">Business Type</option><option>Restaurant</option><option>Hotel</option><option>Cloud Kitchen</option><option>Catering Service</option><option>Hospital</option><option>Institutional</option><option>Other</option></select>
+        <input class="fi" id="cf-products" placeholder="Products Interested In"/>
+        <textarea class="fi fg-full" id="cf-message" placeholder="Tell us about your requirements..." style="grid-column:1/-1"></textarea>
+        <div style="grid-column:1/-1"><button class="btn-primary" onclick="submitCustomForm()">SUBMIT INQUIRY</button></div>
+      </div></div>
+    </div>
+  </section>
+  <div id="custom-footer"></div>
+</div>
+
+<!-- ================================================================ -->
+<!-- PAGE: PROJECTS -->
+<!-- ================================================================ -->
+<div class="page" id="page-projects">
+  <section class="sec-lg border-b" style="padding-top:120px">
+    <div class="cnt">
+      <div class="sh c aos"><span class="sl">// PORTFOLIO</span><h2 class="st">OUR PROJECTS</h2><p class="sd">A showcase of commercial kitchens we've designed, fabricated, and installed across India.</p><div class="div"></div></div>
+    </div>
+  </section>
+  <section class="sec-lg">
+    <div class="cnt">
+      <div class="proj-grid">
+        <div class="proj-card aos"><div class="proj-img"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/b5ec457f5_generated_03daa924.png" alt="Taj Hotel" loading="lazy"/><span class="proj-type">LUXURY HOTEL</span></div><div class="proj-body"><div class="proj-name">Taj Falaknuma Palace</div><div class="proj-meta"><span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Hyderabad</span><span><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Luxury Hotel</span></div><p class="proj-desc">Complete commercial kitchen outfitting with custom fabricated prep stations, exhaust systems, and cold storage units.</p></div></div>
+        <div class="proj-card aos d1"><div class="proj-img"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/871431a1e_generated_cd7eae14.png" alt="Cloud Kitchen" loading="lazy"/><span class="proj-type">CLOUD KITCHEN</span></div><div class="proj-body"><div class="proj-name">CloudChef Multi-Brand Hub</div><div class="proj-meta"><span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Gachibowli, Hyderabad</span><span><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Cloud Kitchen</span></div><p class="proj-desc">12-unit cloud kitchen facility with individual cooking stations, shared cold storage, and central wash areas.</p></div></div>
+        <div class="proj-card aos d2"><div class="proj-img"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/b5ec457f5_generated_03daa924.png" alt="Apollo" loading="lazy"/><span class="proj-type">HOSPITAL KITCHEN</span></div><div class="proj-body"><div class="proj-name">Apollo Hospitals</div><div class="proj-meta"><span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Jubilee Hills, Hyderabad</span><span><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Hospital</span></div><p class="proj-desc">HACCP-compliant kitchen setup with specialized dietary preparation zones and bulk cooking equipment.</p></div></div>
+        <div class="proj-card aos d3"><div class="proj-img"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/871431a1e_generated_cd7eae14.png" alt="Paradise" loading="lazy"/><span class="proj-type">RESTAURANT CHAIN</span></div><div class="proj-body"><div class="proj-name">Paradise Food Court</div><div class="proj-meta"><span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Secunderabad</span><span><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Restaurant</span></div><p class="proj-desc">High-throughput kitchen design with heavy-duty cooking ranges, tandoor stations, and automated wash systems.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-sec">
+    <div class="cta-sec-bg"><img src="https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/b5ec457f5_generated_03daa924.png" alt="" loading="lazy"/></div>
+    <div class="cta-sec-ov"></div>
+    <div class="cta-cnt aos"><span class="sl" style="display:block;justify-content:center">// LET'S BUILD</span><div class="cta-h">READY TO EQUIP YOUR<br><span style="color:var(--primary)">COMMERCIAL KITCHEN?</span></div><p class="cta-p">Get a free consultation and custom quote for your kitchen project.</p><div class="cta-btns"><button class="btn-primary" onclick="showPage('quote')">GET FREE QUOTE →</button><a href="tel:+919876543210" class="btn-outline">CALL: +91 98765 43210</a></div></div>
+  </section>
+  <div id="projects-footer"></div>
+</div>
+
+<!-- ================================================================ -->
+<!-- PAGE: QUOTE BUILDER -->
+<!-- ================================================================ -->
+<div class="page" id="page-quote">
+  <section class="sec-lg border-b" style="padding-top:120px">
+    <div class="cnt">
+      <div class="sh c aos"><span class="sl">// INTERACTIVE QUOTE BUILDER</span><h2 class="st">BUILD YOUR QUOTE</h2><p class="sd">Select equipment, configure finish and installation options, then submit for a formal quotation from our engineering team.</p><div class="div"></div></div>
+      <div class="qb-layout">
+        <!-- Catalog -->
+        <div>
+          <div class="qb-ht">SELECT EQUIPMENT</div>
+          <div id="qb-catalog">
+            <!-- Work Tables -->
+            <div class="acc-block"><div class="acc-hdr" onclick="toggleAcc('wt')"><span class="acc-title">WORK TABLES & PREP STATIONS</span><svg class="acc-chev open" id="chev-wt" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <div class="acc-body open" id="acc-wt">
+              <div class="qb-item"><div class="qb-item-info"><div class="qb-item-name">Work Table – 900×600mm</div><div class="qb-tags"><span class="qb-tag">SS-304</span><span class="qb-tag">18G</span></div></div><div class="qb-right"><span class="qb-price">₹18,000</span><div id="ctrl-wt-sm"></div></div></div>
+              <div class="qb-item"><div class="qb-item-info"><div class="qb-item-name">Work Table – 1200×600mm</div><div class="qb-tags"><span class="qb-tag">SS-304</span><span class="qb-tag">16G</span></div></div><div class="qb-right"><span class="qb-price">₹22,000</span><div id="ctrl-wt-md"></div></div></div>
+              <div class="qb-item"><div class="qb-item-info"><div class="qb-item-name">Work Table – 1500×750mm</div><div class="qb-tags"><span class="qb-tag">SS-304</span><span class="qb-tag">16G</span></div></div><div class="qb-right"><span class="qb-price">₹28,000</span><div id="ctrl-wt-lg"></div></div></div>
+              <div class="qb-item"><div class="qb-item-info"><div class="qb-item-name">Work Table – 1800×750mm</div><div class="qb-tags"><span class="qb-tag">SS-304</span><span class="qb-tag">16G</span></div></div><div class="qb-right"><span class="qb-price">₹34,000</span><div id="ctrl-wt-xl"></div></div></div>
+            </div></div>
+            <!-- Sink Units -->
+            <div class="acc-block"><div class="acc-hdr" onclick="toggleAcc('sk')"><span class="acc-title">SINK UNITS</span><svg class="acc-chev" id="chev-sk" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <div class="acc-body" id="acc-sk">
+              <div class="qb-item"><div class="qb-item-info"><div class="qb-item-name">Single Basin Sink</div><div class="qb-tags"><span class="qb-tag">SS-304</span><span class="qb-tag">18G</span></div></div><div class="qb-right"><span class="qb-price">₹18,000</span><div id="ctrl-sk-1"></div></div></div>
+              <div class="qb-item"><div class="qb-item-info"><div class="qb-item-name">Double Basin Sink</div><div class="qb-tags"><span class="qb-tag">SS-304</span><span class="qb-tag">18G</span></div></div><div class="qb-right"><span class="qb-price">₹30,000</span><div id="ctrl-sk-2"></div></div></div>
+              <div class="qb-item"><div class="qb-item-info"><div class="qb-item-name">Triple Basin Sink</div><div class="qb-tags"><span class="qb-tag">SS-304</span><span class="qb-tag">18G</span></div></div><div class="qb-right"><span class="qb-price">₹45,000</span><div id="ctrl-sk-3"></div></div></div>
+            </div></div>
+            <!-- Exhaust Hoods -->
+            <div class="acc-block"><div class="acc-hdr" onclick="toggleAcc('eh')"><span class="acc-title">EXHAUST HOOD SYSTEMS</span><svg class="acc-chev" id="chev-eh" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <div class="acc-body" id="acc-eh">
+              <div class="qb-item"><div class="qb-item-info"><div class="qb-item-name">Exhaust Hood – 1200mm</div><div class="qb-tags"><span class="qb-tag">SS-304</span><span class="qb-tag">20G</span></div></div><div class="qb-right"><span class="qb-price">₹35,000</span><div id="ctrl-eh-1200"></div></div></div>
+              <div class="qb-item"><div class="qb-item-info"><div class="qb-item-name">Exhaust Hood – 1800mm</div><div class="qb-tags"><span class="qb-tag">SS-304</span><span class="qb-tag">20G</span></div></div><div class="qb-right"><span class="qb-price">₹52,000</span><div id="ctrl-eh-1800"></div></div></div>
+              <div class="qb-item"><div class="qb-item-info"><div class="qb-item-name">Exhaust Hood – 2400mm</div><div class="qb-tags"><span class="qb-tag">SS-304</span><span class="qb-tag">20G</span></div></div><div class="qb-right"><span class="qb-price">₹65,000</span><div id="ctrl-eh-2400"></div></div></div>
+            </div></div>
+            <!-- Cooking Ranges -->
+            <div class="acc-block"><div class="acc-hdr" onclick="toggleAcc('cr')"><span class="acc-title">COOKING RANGES</span><svg class="acc-chev" id="chev-cr" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <div class="acc-body" id="acc-cr">
+              <div class="qb-item"><div class="qb-item-info"><div class="qb-item-name">2-Burner Commercial Range</div><div class="qb-tags"><span class="qb-tag">SS-304</span><span class="qb-tag">18G</span></div></div><div class="qb-right"><span class="qb-price">₹32,000</span><div id="ctrl-cr-2b"></div></div></div>
+              <div class="qb-item"><div class="qb-item-info"><div class="qb-item-name">4-Burner Commercial Range</div><div class="qb-tags"><span class="qb-tag">SS-304</span><span class="qb-tag">18G</span></div></div><div class="qb-right"><span class="qb-price">₹58,000</span><div id="ctrl-cr-4b"></div></div></div>
+              <div class="qb-item"><div class="qb-item-info"><div class="qb-item-name">6-Burner Commercial Range</div><div class="qb-tags"><span class="qb-tag">SS-304</span><span class="qb-tag">18G</span></div></div><div class="qb-right"><span class="qb-price">₹85,000</span><div id="ctrl-cr-6b"></div></div></div>
+            </div></div>
+            <!-- Cold Storage -->
+            <div class="acc-block"><div class="acc-hdr" onclick="toggleAcc('cs')"><span class="acc-title">COLD STORAGE</span><svg class="acc-chev" id="chev-cs" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <div class="acc-body" id="acc-cs">
+              <div class="qb-item"><div class="qb-item-info"><div class="qb-item-name">Vertical Cold Cabinet</div><div class="qb-tags"><span class="qb-tag">SS-304</span><span class="qb-tag">18G</span></div></div><div class="qb-right"><span class="qb-price">₹1,20,000</span><div id="ctrl-cs-cab"></div></div></div>
+              <div class="qb-item"><div class="qb-item-info"><div class="qb-item-name">Walk-In Cooler – 6×8ft</div><div class="qb-tags"><span class="qb-tag">SS-304</span><span class="qb-tag">18G</span></div></div><div class="qb-right"><span class="qb-price">₹2,80,000</span><div id="ctrl-cs-wis"></div></div></div>
+              <div class="qb-item"><div class="qb-item-info"><div class="qb-item-name">Walk-In Cooler – 8×10ft</div><div class="qb-tags"><span class="qb-tag">SS-304</span><span class="qb-tag">18G</span></div></div><div class="qb-right"><span class="qb-price">₹4,20,000</span><div id="ctrl-cs-wil"></div></div></div>
+            </div></div>
+            <!-- Storage Racks -->
+            <div class="acc-block"><div class="acc-hdr" onclick="toggleAcc('sr')"><span class="acc-title">STORAGE & SHELVING</span><svg class="acc-chev" id="chev-sr" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <div class="acc-body" id="acc-sr">
+              <div class="qb-item"><div class="qb-item-info"><div class="qb-item-name">Shelving Unit – 2 Tier</div><div class="qb-tags"><span class="qb-tag">SS-304</span><span class="qb-tag">16G</span></div></div><div class="qb-right"><span class="qb-price">₹12,000</span><div id="ctrl-sr-2t"></div></div></div>
+              <div class="qb-item"><div class="qb-item-info"><div class="qb-item-name">Shelving Unit – 4 Tier</div><div class="qb-tags"><span class="qb-tag">SS-304</span><span class="qb-tag">16G</span></div></div><div class="qb-right"><span class="qb-price">₹22,000</span><div id="ctrl-sr-4t"></div></div></div>
+              <div class="qb-item"><div class="qb-item-info"><div class="qb-item-name">Wall-Mount Shelf – 900mm</div><div class="qb-tags"><span class="qb-tag">SS-304</span><span class="qb-tag">18G</span></div></div><div class="qb-right"><span class="qb-price">₹8,000</span><div id="ctrl-sr-wall"></div></div></div>
+            </div></div>
+          </div>
+        </div>
+
+        <!-- Cart Panel -->
+        <div class="cart-panel">
+          <div class="cart-hdr">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <span class="cart-hdr-t">YOUR QUOTE</span>
+            <span class="cart-cnt" id="cart-cnt">0</span>
+          </div>
+          <div id="cart-empty-state" class="cart-empty"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><div class="cart-empty-t">NO ITEMS ADDED YET</div></div>
+          <div class="cart-lines" id="cart-lines"></div>
+          <div class="cart-opts">
+            <div><span class="opt-lbl">FINISH OPTION</span><select class="opt-sel" id="finish-sel" onchange="updateCart()"><option value="1">Standard Brushed (No extra charge)</option><option value="1.08">Mirror Polish (+8%)</option><option value="1.12">HACCP Color-Coded (+12%)</option></select></div>
+            <div><span class="opt-lbl">INSTALLATION</span><select class="opt-sel" id="install-sel" onchange="updateCart()"><option value="0">Supply Only</option><option value="2500">Supply + Delivery (Hyderabad)</option><option value="8000">Supply + Delivery + Installation</option></select></div>
+          </div>
+          <div class="cart-tots" id="cart-tots">
+            <div class="tot-row"><span class="tot-lbl">SUBTOTAL</span><span class="tot-val" id="t-sub">₹0</span></div>
+            <div class="tot-row"><span class="tot-lbl">GST (18%)</span><span class="tot-val" id="t-gst">₹0</span></div>
+            <div class="tot-row" id="t-inst-row" style="display:none"><span class="tot-lbl">INSTALLATION</span><span class="tot-val" id="t-inst">₹0</span></div>
+            <hr class="tot-div"/>
+            <div class="tot-row"><span class="grand-lbl">ESTIMATED TOTAL</span><span class="grand-val" id="t-total">₹0</span></div>
+            <div class="cart-note">*Indicative prices. Final quote after site visit.</div>
+          </div>
+          <div class="cart-act"><button class="btn-primary" id="proceed-btn" onclick="openQModal()">PROCEED TO QUOTE →</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="quote-footer"></div>
+</div>
+
+<!-- ================================================================ -->
+<!-- PAGE: CONTACT -->
+<!-- ================================================================ -->
+<div class="page" id="page-contact">
+  <section class="sec-lg border-b" style="padding-top:120px">
+    <div class="cnt">
+      <div class="sh c aos"><span class="sl">// CONTACT US</span><h2 class="st">LET'S BUILD YOUR KITCHEN</h2><p class="sd">Get in touch with our engineering team for a free consultation and custom quote.</p><div class="div"></div></div>
+    </div>
+  </section>
+  <section class="sec-lg">
+    <div class="cnt">
+      <div class="contact-layout">
+        <div>
+          <div class="info-card aos"><div class="info-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.81 3.38 2 2 0 0 1 3.7 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8a16 16 0 0 0 5.49 5.49l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 15z"/></svg></div><div><div class="info-t">PHONE</div><div class="info-l">+91 74166 19893<br></div></div></div>
+          <div class="info-card aos d1"><div class="info-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="info-t">EMAIL</div><div class="info-l">info@steelcraft.in<br>sales@steelcraft.in</div></div></div>
+          <div class="info-card aos d2"><div class="info-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="info-t">ADDRESS</div><div class="info-l">Plot No. 45, Phase II<br>Balanagar Industrial Area<br>Hyderabad, Telangana 500037</div></div></div>
+          <div class="info-card aos d3"><div class="info-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="info-t">WORKING HOURS</div><div class="info-l">Mon – Sat: 9:00 AM – 6:00 PM<br>Sunday: Closed</div></div></div>
+          <div class="map-box aos"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>BALANAGAR, HYDERABAD</span></div>
+        </div>
+        <div>
+          <div class="form-ht">REQUEST A QUOTE</div>
+          <div id="contact-form-wrap">
+            <div class="form-grid" id="contact-form">
+              <input class="fi" id="ct-name" placeholder="Full Name *"/>
+              <input class="fi" id="ct-email" type="email" placeholder="Email Address *"/>
+              <input class="fi" id="ct-phone" placeholder="Phone Number *"/>
+              <input class="fi" id="ct-company" placeholder="Company Name"/>
+              <select class="fi" id="ct-type"><option value="">Business Type</option><option>Restaurant</option><option>Hotel</option><option>Cloud Kitchen</option><option>Catering Service</option><option>Hospital</option><option>Institutional</option><option>Other</option></select>
+              <input class="fi" id="ct-products" placeholder="Products Interested In"/>
+              <textarea class="fi" id="ct-message" placeholder="Tell us about your requirements..." style="grid-column:1/-1"></textarea>
+              <div style="grid-column:1/-1"><button class="btn-primary" onclick="submitContactForm()">SUBMIT INQUIRY</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="contact-footer"></div>
+</div>
+
+<!-- ================================================================ -->
+<!-- SHARED FOOTER (injected into each page) -->
+<!-- ================================================================ -->
+<template id="footer-tpl">
+  <footer>
+    <div class="foot-in">
+      <div class="foot-grid">
+        <div><div class="logo" style="cursor:default"><div class="logo-box"><div class="logo-sq"></div></div><div><span class="logo-name">STEELCRAFT</span><span class="logo-sub">HYDERABAD</span></div></div><p class="foot-brand-p">Premium stainless steel kitchen equipment manufacturer serving restaurants, hotels, and cloud kitchens across India since 2005.</p></div>
+        <div><div class="foot-ct">QUICK LINKS</div><div class="foot-links"><a onclick="showPage('about')">About Us</a><a onclick="showPage('products')">Products</a><a onclick="showPage('custom')">Custom Solutions</a><a onclick="showPage('projects')">Projects</a><a onclick="showPage('quote')">Quote Builder</a><a onclick="showPage('contact')">Contact</a></div></div>
+        <div><div class="foot-ct">PRODUCTS</div><div class="foot-links"><a onclick="showPage('products')">Work Tables</a><a onclick="showPage('products')">Exhaust Hoods</a><a onclick="showPage('products')">Cold Storage</a><a onclick="showPage('products')">Cooking Ranges</a><a onclick="showPage('products')">Sink Units</a><a onclick="showPage('products')">Storage Racks</a></div></div>
+        <div><div class="foot-ct">CONTACT</div><a href="tel:+917416619893" class="foot-ci"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.81 3.38 2 2 0 0 1 3.7 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8a16 16 0 0 0 5.49 5.49l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 15z"/></svg>+91 74166 19893</a><a href="mailto:info@steelcraft.in" class="foot-ci"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@steelcraft.in</a><div class="foot-ci"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Balanagar Industrial Area,<br>Hyderabad, Telangana 500037</span></div></div>
+      </div>
+      <div class="foot-bot"><p class="foot-copy">© 2026 STEELCRAFT INDUSTRIES. ALL RIGHTS RESERVED.</p><div class="foot-bot-r"><p class="foot-copy">CRAFTED WITH PRECISION IN HYDERABAD</p><span class="foot-sep">|</span><a href="https://www.faizcodex.com" target="_blank" rel="noopener noreferrer" class="dev-credit">DEVELOPED BY <span>FAIZCODEX</span></a></div></div>
+    </div>
+  </footer>
+</template>
+
+<!-- ================================================================ -->
+<!-- QUOTE MODAL -->
+<!-- ================================================================ -->
+<div class="modal-ov" id="q-modal" onclick="closeQModalOv(event)">
+  <div class="modal">
+    <div class="modal-hdr"><span class="modal-t">SUBMIT QUOTE REQUEST</span><button class="modal-cls" onclick="closeQModal()">×</button></div>
+    <div class="modal-body" id="q-modal-body">
+      <div class="mos"><div class="mos-t">ORDER SUMMARY</div><div id="mos-lines"></div><div class="mos-tot"><span class="mos-tl">ESTIMATED TOTAL</span><span class="mos-tv" id="mos-tv">₹0</span></div></div>
+      <div class="form-grid" style="margin-bottom:14px">
+        <input class="fi" id="qm-name" placeholder="Full Name *"/>
+        <input class="fi" id="qm-email" type="email" placeholder="Email Address *"/>
+        <input class="fi" id="qm-phone" placeholder="Phone Number *"/>
+        <input class="fi" id="qm-company" placeholder="Company Name"/>
+      </div>
+      <p class="form-note" style="margin-bottom:16px">Our team will review your quote and contact you within 24 hours with a formal proposal.</p>
+      <button class="btn-primary" style="width:100%;justify-content:center" onclick="submitQModal()">SUBMIT QUOTE REQUEST</button>
+    </div>
+  </div>
+</div>
+
+<!-- FLOATING COMM -->
+<div id="fc">
+  <div class="fc-popup" id="fc-popup">
+    <div class="fc-head"><div class="fc-ht">DIRECT LINE TO FABRICATION</div><div class="fc-sub">Connect with our team instantly</div></div>
+    <div class="fc-body">
+      <a href="https://wa.me/919876543210?text=Hi%2C%20I%27m%20interested%20in%20stainless%20steel%20kitchen%20equipment." target="_blank" class="fc-link"><div class="fc-ic" style="background:#25D366">💬</div><div><div class="fc-lt">WhatsApp</div><div class="fc-ls">Chat with us now</div></div></a>
+      <a href="tel:+917416619893" class="fc-link"><div class="fc-ic" style="background:var(--primary)">📞</div><div><div class="fc-lt">Call Us</div><div class="fc-ls">+91 74166 19893</div></div></a>
+    </div>
+  </div>
+  <button class="fc-btn" id="fc-btn" onclick="toggleFC()" aria-label="Contact">
+    <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+</div>
+
+<!-- ================================================================ -->
+<!-- JAVASCRIPT -->
+<!-- ================================================================ -->
+<script>
+// ===== PRODUCTS DATA =====
+const PRODUCTS = [
+  {id:'sk3',name:'Triple Basin Commercial Sink',cat:'Sink Units',specs:['SS-304','18 Gauge','1800×600×850mm'],img:'https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/649ae245e_generated_629481dd.png',price:'From ₹45,000'},
+  {id:'wt1',name:'Heavy Duty Work Table',cat:'Work Tables',specs:['SS-304','16 Gauge','1500×750×900mm'],img:'https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/0e2ae5527_generated_3738762d.png',price:'From ₹28,000'},
+  {id:'eh1',name:'Wall-Mount Exhaust Hood',cat:'Exhaust Hoods',specs:['SS-304','20 Gauge','2400×1000×500mm'],img:'https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/309b31b82_generated_0853dc60.png',price:'From ₹65,000'},
+  {id:'cr1',name:'6-Burner Commercial Range',cat:'Cooking Ranges',specs:['SS-304','18 Gauge','1800×900×850mm'],img:'https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/423a4b1e5_generated_7bed76ee.png',price:'From ₹85,000'},
+  {id:'sr1',name:'Heavy Duty Storage Rack',cat:'Storage Racks',specs:['SS-304','16 Gauge','1200×600×1800mm'],img:'https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/ceb319584_generated_ccbf0dc2.png',price:'From ₹22,000'},
+  {id:'cs1',name:'Vertical Cold Cabinet',cat:'Cold Storage',specs:['SS-304','18 Gauge','700×700×2050mm'],img:'https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/4b8b4dab3_generated_6761957a.png',price:'From ₹1,20,000'},
+  {id:'wt2',name:'Work Table – 900×600mm',cat:'Work Tables',specs:['SS-304','18 Gauge','900×600×850mm'],img:'https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/0e2ae5527_generated_3738762d.png',price:'From ₹18,000'},
+  {id:'sk1',name:'Single Basin Sink',cat:'Sink Units',specs:['SS-304','18 Gauge','600×500×850mm'],img:'https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/649ae245e_generated_629481dd.png',price:'From ₹18,000'},
+  {id:'eh2',name:'Exhaust Hood – 1200mm',cat:'Exhaust Hoods',specs:['SS-304','20 Gauge','1200×900×450mm'],img:'https://media.base44.com/images/public/69fba72133813e79dbc4f6ec/309b31b82_generated_0853dc60.png',price:'From ₹35,000'},
+];
+let prodFilter='all', prodSearch='';
+
+function renderProducts(){
+  const grid=document.getElementById('products-grid');
+  const items=PRODUCTS.filter(p=>{
+    const cf=prodFilter==='all'||p.cat===prodFilter;
+    const cs=p.name.toLowerCase().includes(prodSearch.toLowerCase());
+    return cf&&cs;
+  });
+  grid.innerHTML=items.map(p=>`
+    <div class="prod-card aos" onclick="showPage('quote')" style="opacity:1;transform:none">
+      <div class="prod-img"><img src="${p.img}" alt="${p.name}" loading="lazy"/><span class="prod-badge">${p.cat.toUpperCase()}</span></div>
+      <div class="prod-info"><div class="prod-name">${p.name}</div><div class="prod-specs">${p.specs.map(s=>`<span class="prod-tag">${s}</span>`).join('')}</div><div class="prod-foot"><span class="prod-price">${p.price}</span><span class="prod-link">GET QUOTE →</span></div></div>
+    </div>`).join('');
+}
+function filterProducts(cat,btn){
+  prodFilter=cat;
+  document.querySelectorAll('#filter-bar .flt-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderProducts();
+}
+function searchProducts(val){prodSearch=val;renderProducts();}
+
+// ===== PAGE NAVIGATION =====
+const pages=['home','about','products','custom','projects','quote','contact'];
+function showPage(id){
+  pages.forEach(p=>{
+    const el=document.getElementById('page-'+p);
+    if(el) el.classList.toggle('active',p===id);
+  });
+  // Update nav active
+  document.querySelectorAll('[data-page]').forEach(a=>a.classList.toggle('active',a.dataset.page===id));
+  window.scrollTo({top:0,behavior:'instant'});
+  // Inject footers on first visit
+  const footerSlot=document.getElementById(id+'-footer');
+  if(footerSlot&&!footerSlot.hasChildNodes()){
+    footerSlot.appendChild(document.getElementById('footer-tpl').content.cloneNode(true));
+  }
+  // Re-run AOS
+  setTimeout(()=>{
+    document.querySelectorAll('#page-'+id+' .aos').forEach(el=>{
+      el.classList.remove('in');
+      void el.offsetWidth;
+      el.classList.add('in');
+    });
+  },50);
+  if(id==='products') renderProducts();
+}
+
+// ===== HEADER SCROLL =====
+window.addEventListener('scroll',()=>{
+  document.getElementById('hdr').classList.toggle('scrolled',window.scrollY>50);
+});
+
+// ===== MOBILE MENU =====
+function toggleMenu(){document.getElementById('mob-nav').classList.toggle('open');document.getElementById('ov').classList.toggle('show')}
+function closeMenu(){document.getElementById('mob-nav').classList.remove('open');document.getElementById('ov').classList.remove('show')}
+
+// ===== ACCORDION (quote builder) =====
+function toggleAcc(id){
+  const body=document.getElementById('acc-'+id);
+  const chev=document.getElementById('chev-'+id);
+  const isOpen=body.classList.contains('open');
+  body.classList.toggle('open',!isOpen);
+  chev.classList.toggle('open',!isOpen);
+}
+
+// ===== QUOTE BUILDER LOGIC =====
+const QB_ITEMS={
+  'wt-sm':{name:'Work Table – 900×600mm',price:18000},
+  'wt-md':{name:'Work Table – 1200×600mm',price:22000},
+  'wt-lg':{name:'Work Table – 1500×750mm',price:28000},
+  'wt-xl':{name:'Work Table – 1800×750mm',price:34000},
+  'sk-1':{name:'Single Basin Sink',price:18000},
+  'sk-2':{name:'Double Basin Sink',price:30000},
+  'sk-3':{name:'Triple Basin Sink',price:45000},
+  'eh-1200':{name:'Exhaust Hood – 1200mm',price:35000},
+  'eh-1800':{name:'Exhaust Hood – 1800mm',price:52000},
+  'eh-2400':{name:'Exhaust Hood – 2400mm',price:65000},
+  'cr-2b':{name:'2-Burner Range',price:32000},
+  'cr-4b':{name:'4-Burner Range',price:58000},
+  'cr-6b':{name:'6-Burner Range',price:85000},
+  'cs-cab':{name:'Vertical Cold Cabinet',price:120000},
+  'cs-wis':{name:'Walk-In Cooler – 6×8ft',price:280000},
+  'cs-wil':{name:'Walk-In Cooler – 8×10ft',price:420000},
+  'sr-2t':{name:'Shelving Unit – 2 Tier',price:12000},
+  'sr-4t':{name:'Shelving Unit – 4 Tier',price:22000},
+  'sr-wall':{name:'Wall-Mount Shelf – 900mm',price:8000},
+};
+const cart={};
+const fmt=n=>'₹'+Math.round(n).toLocaleString('en-IN');
+
+function renderCtrl(id){
+  const el=document.getElementById('ctrl-'+id);
+  if(!el)return;
+  if(cart[id]){
+    el.innerHTML=`<div class="qty-ctrl">
+      <button class="qty-btn" onclick="qtyChange('${id}',-1)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+      <span class="qty-val">${cart[id]}</span>
+      <button class="qty-btn" onclick="qtyChange('${id}',1)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+    </div>`;
+  }else{
+    el.innerHTML=`<button class="add-btn" onclick="addItem('${id}')"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> ADD</button>`;
+  }
+}
+function addItem(id){cart[id]=(cart[id]||0)+1;renderCtrl(id);updateCart();}
+function qtyChange(id,d){cart[id]=(cart[id]||0)+d;if(cart[id]<=0)delete cart[id];renderCtrl(id);updateCart();}
+function removeCartItem(id){delete cart[id];renderCtrl(id);updateCart();}
+
+function updateCart(){
+  const mult=parseFloat(document.getElementById('finish-sel').value)||1;
+  const inst=parseInt(document.getElementById('install-sel').value)||0;
+  const keys=Object.keys(cart);
+  const total=keys.reduce((s,k)=>s+cart[k],0);
+
+  // badge
+  const badge=document.getElementById('cart-cnt');
+  badge.textContent=total;
+  badge.style.display=total>0?'inline':'none';
+
+  // empty/filled states
+  document.getElementById('cart-empty-state').style.display=total===0?'block':'none';
+  const lines=document.getElementById('cart-lines');
+  lines.style.display=total>0?'block':'none';
+  const tots=document.getElementById('cart-tots');
+  tots.style.display=total>0?'flex':'none';
+
+  // render lines
+  lines.innerHTML=keys.map(k=>`<div class="cart-line">
+    <div><div class="cl-name">${QB_ITEMS[k].name}</div><div class="cl-sub">×${cart[k]} @ ${fmt(QB_ITEMS[k].price*mult)}</div></div>
+    <div class="cl-r"><span class="cl-price">${fmt(QB_ITEMS[k].price*cart[k]*mult)}</span>
+    <button class="cl-rm" onclick="removeCartItem('${k}')"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg></button></div>
+  </div>`).join('');
+
+  const sub=keys.reduce((s,k)=>s+QB_ITEMS[k].price*cart[k]*mult,0);
+  const gst=sub*0.18;
+  const tot=sub+gst+inst;
+  document.getElementById('t-sub').textContent=fmt(sub);
+  document.getElementById('t-gst').textContent=fmt(gst);
+  document.getElementById('t-inst').textContent=fmt(inst);
+  document.getElementById('t-inst-row').style.display=inst>0?'flex':'none';
+  document.getElementById('t-total').textContent=fmt(tot);
+
+  const btn=document.getElementById('proceed-btn');
+  btn.classList.toggle('enabled',total>0);
+  btn.style.cursor=total>0?'pointer':'not-allowed';
+}
+
+// Initialize all controls
+Object.keys(QB_ITEMS).forEach(id=>renderCtrl(id));
+
+// ===== QUOTE MODAL =====
+function openQModal(){
+  if(!Object.keys(cart).length)return;
+  const mult=parseFloat(document.getElementById('finish-sel').value)||1;
+  const inst=parseInt(document.getElementById('install-sel').value)||0;
+  const keys=Object.keys(cart);
+  document.getElementById('mos-lines').innerHTML=keys.map(k=>`<div class="mos-line"><span class="mos-ln">${QB_ITEMS[k].name} ×${cart[k]}</span><span class="mos-lp">${fmt(QB_ITEMS[k].price*cart[k]*mult)}</span></div>`).join('');
+  const sub=keys.reduce((s,k)=>s+QB_ITEMS[k].price*cart[k]*mult,0);
+  document.getElementById('mos-tv').textContent=fmt(sub*1.18+inst);
+  document.getElementById('q-modal').classList.add('show');
+}
+function closeQModal(){document.getElementById('q-modal').classList.remove('show');}
+function closeQModalOv(e){if(e.target===document.getElementById('q-modal'))closeQModal();}
+function submitQModal(){
+  const name=document.getElementById('qm-name').value.trim();
+  const email=document.getElementById('qm-email').value.trim();
+  const phone=document.getElementById('qm-phone').value.trim();
+  if(!name||!email||!phone){alert('Please fill in required fields.');return;}
+  document.getElementById('q-modal-body').innerHTML=`<div class="form-success"><svg class="fs-icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div class="fs-t">QUOTE SUBMITTED!</div><p class="fs-d">Thank you, ${name}! Our team will review and contact you within 24 hours.</p></div>`;
+}
+
+// ===== CONTACT FORM =====
+function submitContactForm(){
+  const name=document.getElementById('ct-name').value.trim();
+  const email=document.getElementById('ct-email').value.trim();
+  const phone=document.getElementById('ct-phone').value.trim();
+  if(!name||!email||!phone){alert('Please fill required fields.');return;}
+  document.getElementById('contact-form-wrap').innerHTML=`<div class="form-success"><svg class="fs-icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div class="fs-t">INQUIRY SUBMITTED!</div><p class="fs-d">Thank you, ${name}! Our team will contact you within 24 hours.</p></div>`;
+}
+
+// ===== CUSTOM FORM =====
+function submitCustomForm(){
+  const name=document.getElementById('cf-name').value.trim();
+  const email=document.getElementById('cf-email').value.trim();
+  const phone=document.getElementById('cf-phone').value.trim();
+  if(!name||!email||!phone){alert('Please fill required fields.');return;}
+  document.getElementById('custom-form-wrap').innerHTML=`<div class="form-success"><svg class="fs-icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div class="fs-t">INQUIRY SUBMITTED!</div><p class="fs-d">Thank you, ${name}! Our engineers will get back to you within 24 hours.</p></div>`;
+}
+
+// ===== FLOATING COMM =====
+function toggleFC(){document.getElementById('fc-popup').classList.toggle('show');document.getElementById('fc-btn').classList.toggle('active');}
+document.addEventListener('click',e=>{const fc=document.getElementById('fc');if(!fc.contains(e.target)){document.getElementById('fc-popup').classList.remove('show');document.getElementById('fc-btn').classList.remove('active');}});
+
+// ===== SCROLL AOS =====
+const aosObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:0.07,rootMargin:'0px 0px -30px 0px'});
+function observeAOS(){document.querySelectorAll('.aos').forEach(el=>aosObs.observe(el));}
+observeAOS();
+
+// ===== INIT =====
+showPage('home');
+</script>
+</body>
+</html>
